@@ -1,0 +1,21 @@
+export TF_VAR_github_token=XXX
+
+export TF_WORKSPACE=robandpdx
+
+export ARC_ORG_1=
+export ARC_ORG_1_APP_ID=
+export ARC_ORG_1_INSTALLATION_ID=
+export ARC_ORG_1_PRIVATE_KEY_FILE_PATH=
+
+export ARC_ORG_2=
+export ARC_ORG_2_APP_ID=
+export ARC_ORG_2_INSTALLATION_ID=
+export ARC_ORG_2_PRIVATE_KEY_FILE_PATH=
+
+export ARC_ORG_3=
+export ARC_ORG_3_APP_ID=
+export ARC_ORG_3_INSTALLATION_ID=
+export ARC_ORG_3_PRIVATE_KEY_FILE_PATH=
+
+export ARC_ENTERPRISE_1=
+export ARC_ENTERPRISE_1_PAT=
