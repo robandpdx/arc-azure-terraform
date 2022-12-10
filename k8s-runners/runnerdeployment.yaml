@@ -1,0 +1,14 @@
+# runnerdeployment.yaml
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: example-runnerdeploy
+  namespace: actions-runner-system
+spec:
+  replicas: 2
+  template:
+    spec:
+      organization: robandpdx-admin-ops
+      githubAPICredentialsFrom:
+        secretRef:
+          name: arc-robandpdx-admin-ops
