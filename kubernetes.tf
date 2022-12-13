@@ -17,7 +17,7 @@ terraform {
 
 data "terraform_remote_state" "aks" {
   backend = "azurerm"
-  workspace = "robandpdx"
+  workspace = var.cluster_tf_workspace
 
   config = {
     resource_group_name  = "robandpdx-tfstate"
