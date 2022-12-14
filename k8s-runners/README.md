@@ -77,3 +77,9 @@ Deploy the webhook driven `HorizontalRunnerAutoscaler` and corresponding `Runner
 kubectl apply -f k8s-runners/rd-robandpdx-admin-ops-webhook.yaml
 ```
 Configure a webhook to send `Worflow jobs` events to `http://<your-lb-ip-address>//arc-github-webhook-server`. You can find the ip address to use by looking at your k8s deployment and finding the ingress load balancer ip address.
+
+## Troubleshooting
+Sometimes containers get stuck in terminating and terraform destroy fails. If this happens you need to remove the finalizer from each pod that is stuck as [described here](https://containersolutions.github.io/runbooks/posts/kubernetes/pod-stuck-in-terminating-state/).
+```
+kubectl patch pod [POD_NAME] -p '{"metadata":{"finalizers":null}}'
+```
