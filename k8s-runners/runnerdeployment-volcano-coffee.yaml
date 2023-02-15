@@ -7,9 +7,6 @@ spec:
   template:
     spec:
       enterprise: volcano-coffee
-      githubAPICredentialsFrom:
-        secretRef:
-          name: arc-volcano-coffee
 ---
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: HorizontalRunnerAutoscaler
@@ -17,9 +14,6 @@ metadata:
   name: volcano-coffee-runner-deployment-autoscaler
   namespace: actions-runner-system
 spec:
-  githubAPICredentialsFrom:
-    secretRef:
-      name: arc-volcano-coffee
   # Runners in the targeted RunnerDeployment won't be scaled down
   # for 5 minutes instead of the default 10 minutes now
   scaleDownDelaySecondsAfterScaleOut: 300
