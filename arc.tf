@@ -8,7 +8,7 @@ module "cert_manager" {
 }
 
 module "actions-runner-controller" {
-  source = "git::https://github.com/robandpdx/tf-modules.git//actions-runner-controller"
+  source = "git::https://github.com/robandpdx/tf-modules.git//actions-runner-controller?ref=arc2"
   depends_on = [
     module.cert_manager,
   ]
