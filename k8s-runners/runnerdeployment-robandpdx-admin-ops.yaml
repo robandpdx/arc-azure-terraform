@@ -27,8 +27,8 @@ spec:
     name: robandpdx-admin-ops-runner-deployment
     # Uncomment the below in case the target is not RunnerDeployment but RunnerSet
     #kind: RunnerSet
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 4
+  maxReplicas: 10
   metrics:
   - type: PercentageRunnersBusy
     scaleUpThreshold: '0.75'
